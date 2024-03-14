@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    background-image: url('images/Be Sunnnn.jpg');
+    background-size: 60%;
+    background-position: center;
+}
+nav{
+    width: 80%;
+    position: sticky;
+    margin: 20px auto;
+    z-index: 1;
+    display:flex;
+    align-items: center;
+}
+
+.logo{
+    flex-basis: 20%;
+}
+.logo img{
+    width: 150px;
+}
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+}
+.Sun {
+    position: fixed;
+    width: 100px; /* Adjust based on your image size */
+    height: auto;
+    animation: walkAnimation 10s infinite linear;
+    transform: scale(0.2); /* Scale the image down to 20% of its original size */
+    bottom: 0; /* Position the image at the bottom of the viewport */
+    z-index: 1; /* Ensures it stays behind other content */
+    vertical-align: middle;
+    margin-top: 5px;
+    left: -100px;
+}
+.Tun {
+    position: fixed;
+    width: 100px; /* Adjust based on your image size */
+    height: auto;
+    animation: walkAnimation 10s infinite linear;
+    transform: scale(0.2); /* Scale the image down to 20% of its original size */
+    bottom: 0; /* Position the image at the bottom of the viewport */
+    z-index: 1; /* Ensures it stays behind other content */
+    vertical-align: middle;
+    margin-top: 5px;
+    right: -100px;
+}
+@keyframes walkAnimation {
+    0% {
+        left: -100px; /* Start off-screen if desired */
+    }
+    50% {
+        left: calc(100vw - 100px); /* Move across to the right side of the viewport */
+    }
+    100% {
+        left: -100px; /* Return to start */
+    }
+}
